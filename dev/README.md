@@ -41,9 +41,13 @@ issue_number: 해당 이슈가 진행되는 스프린트에서 할당받은 고�
 
   | 생성 목적 | MR 제목                                 |
   | --------- | --------------------------------------- |
-  | 기능 개발 | [Feature] [{sprint_name}]:{issue_name}({issue_number})  |
-  | 버그 픽스 | [Fix] [{sprint_name}]:{issue_name}({issue_number})      |
-  | 코드 개선 | [Refactor] [{sprint_name}]:{issue_name}({issue_number}) |
+  | 기능 개발 | [Feat] : {issue_name}({issue_number})   |
+  | 버그 픽스 | [Fix] : {issue_name}({issue_number})      |
+  | 코드 개선 | [Refactor] : {issue_name}({issue_number}) |
+  | css 개선 | [Style] : {issue_name}({issue_number}) |
+  | 문서 수정 | [Docs] : {issue_name}({issue_number}) |
+  | 빌드 설정 변경 등 기타 작업 | [Chore] : {issue_name}({issue_number}) |
+  
 
   - MR 설명
 
