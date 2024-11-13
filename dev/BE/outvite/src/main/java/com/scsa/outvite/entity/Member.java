@@ -21,12 +21,12 @@ public class Member {
     @Column(name = "id")
     private String id;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "phone")
+    @Column(name = "phone", nullable = false)
     private String phone;
 }
