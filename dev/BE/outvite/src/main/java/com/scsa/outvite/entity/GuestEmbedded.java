@@ -15,6 +15,6 @@ public class GuestEmbedded implements Serializable {
     @Column(name="phone")
     private String phone;
 
-    @Column(name = "invitationid" )
+    @Column(name = "invitation_id" )
     private String invitationId;
 }
