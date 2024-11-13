@@ -7,8 +7,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-//@NoArgsConstructor
-@NoArgsConstructor//(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @Embeddable
