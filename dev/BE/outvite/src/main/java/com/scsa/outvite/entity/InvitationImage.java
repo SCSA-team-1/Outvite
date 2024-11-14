@@ -1,8 +1,8 @@
 package com.scsa.outvite.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,19 +14,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "invitation_image")
+public class InvitationImage {
+    @EmbeddedId
+    private InvitationImageEmbedded id = new InvitationImageEmbedded();
 
-    @Id
-    @Column(name = "id")
-    private String id;
-
-    @Column(name = "password")
-    private String password;
-
-    @Column(name = "name")
-    private String name;
-
-    @Column(name = "phone")
-    private String phone;
+    @Column(name = "url", nullable = false)
+    private String url;
 }
