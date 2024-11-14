@@ -1,0 +1,29 @@
+/* 기본 컨테이너 스타일 */
+.navbar-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* layoutMode에 따른 클래스 */
+  .space-mode {
+    justify-content: space-between;
+  }
+  
+  .padding-mode {
+    padding: 0;
+  }
+  
+  /* 아이템 스타일 */
+  .navbar-item {
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* 구분선 스타일 */
+  .navbar-separator {
+    margin: 0 8px;
+    color: #ddd;
+  }
+  
