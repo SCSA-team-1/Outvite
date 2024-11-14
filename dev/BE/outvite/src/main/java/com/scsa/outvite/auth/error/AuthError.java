@@ -8,7 +8,9 @@ import org.springframework.http.HttpStatus;
 @Getter
 @AllArgsConstructor
 public enum AuthError implements ErrorCode {
-    DUPLICATED_ID(HttpStatus.CONFLICT.value(), "사용할 수 없는 ID입니다.");
+    DUPLICATED_ID(HttpStatus.CONFLICT.value(), "사용할 수 없는 ID입니다."),
+    NON_EXIST_ID(HttpStatus.UNAUTHORIZED.value(),"해당 ID 유저가 없습니다."),
+    WRONG_PWD(HttpStatus.UNAUTHORIZED.value(),"잘못된 비밀번호 입니다.");
 
     private final int status;
     private final String message;
