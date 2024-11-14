@@ -24,7 +24,7 @@ public class AuthService {
         );
 
         if(!newMember.getPassword().equals(pwd)){
-            throw new BusinessException(WRONG_PWD);
+            throw new BusinessException(WRONG_PASSWORD);
         }
 
         return new LoginResponse(newMember);

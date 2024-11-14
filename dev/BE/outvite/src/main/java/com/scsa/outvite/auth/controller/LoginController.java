@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import static com.scsa.outvite.global.ApiConstants.LOGINED_ID;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/auth/")
@@ -16,9 +18,9 @@ public class LoginController {
 
     @PostMapping("/login")
     public ApiResponse login(@RequestBody LoginRequest request, HttpSession session) {
-        session.removeAttribute("id");
+        session.removeAttribute(LOGINED_ID);
         LoginResponse response = authService.login(request.getId(), request.getPassword());
-        session.setAttribute("id", request.getId());
+        session.setAttribute(LOGINED_ID, request.getId());
         return ApiResponse.builder()
                 .message("로그인에 성공했습니다.")
                 .data(response)
