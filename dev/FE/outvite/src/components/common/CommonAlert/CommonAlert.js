@@ -8,11 +8,11 @@ const CommonAlert = ({
   notiContent,
   buttonTitle,
   buttonFunction,
-  backgroundColor = "light-color",
-  buttonColor = "primary-color",
-  buttonTextColor = "light-color",
-  buttonWidth = "100px",
-  buttonHeight = "40px",
+  backgroundColor,
+  buttonColor,
+  buttonTextColor,
+  buttonWidth,
+  buttonHeight
 }) => {
   return (
     <div
@@ -21,12 +21,14 @@ const CommonAlert = ({
     >
       <p className="alert-content">{notiContent}</p>
       <CommonButton
-        title={buttonTitle}
-        onClick={buttonFunction}
-        color={buttonColor}
-        textColor={buttonTextColor}
-        width={buttonWidth}
-        height={buttonHeight}
+        buttonTitle="모바일 청첩장 제작"
+        buttonIcon={<div/>}
+        backgroundColor="#EAE3E3"
+        buttonTextColor="#555555"
+        buttonWidth="300px"
+        buttonHeight="40px"
+        buttonRadius="xs"
+        buttonFunction={buttonFunction}
       />
     </div>
   );
