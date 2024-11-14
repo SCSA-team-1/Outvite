@@ -1,0 +1,148 @@
+:root {
+  /* 메인 색상 셋 */
+  --color-main-bottom-bcg: #DBD8D8;
+  --color-main-bcg: #FFFFFF;
+  --color-main-theme: #F6F1EE;
+  --color-main-center-bcg: #EDE4E1;
+  --color-main-btn: #B4A4A4;
+  --color-main-input: #B4A4A4;
+  --color-main-font: #000000;
+  --color-main-soft-font: #6C6C6C;
+  --color-main-softer-font: #AC938D;
+  --color-main-btn-font: #FFFFFF;
+  --color-main-sample-font: #B4A4A4;
+  --color-main-notice-font: #C38383;
+  --color-main-introduce-sample-font: #696969;
+  --color-main-radio-btn: #D9D9D9;
+  --color-main-radio-btn-checked: #FFA9A9;
+  --color-main-delete-btn: #D9D9D9;
+  --color-main-border: #EFEFEF;
+  --color-main-delete-font: #C84646;
+  --color-main-cancle-btn: #E3BBBA;
+  --color-main-info-font: #777777;
+  
+/* 테마1 색상 셋 */
+--color-theme1-bcg: #FFFFFF;
+--color-theme1-font: #000000;
+--color-theme1-soft-font: #545454;
+--color-theme1-softer-font: #CBC4C4;
+--color-theme1-input: #EAE3E3;
+--color-theme1-border: #E8E8E8;
+--color-theme1-footer-bcg: #F6F6F6;
+--color-theme1-reply-font: #646464;
+--color-theme1-reply-date-font: #929292;
+
+/* 테마2 색상셋 */
+--color-theme2-opt1-theme: #FFF5F4;
+--color-theme2-opt1-invitation-bcg: #FFF9F7;
+--color-theme2-opt1-border: #FFCBCB;
+--color-theme2-opt1-soft-font: #C38383;
+--color-theme2-opt1-bcg: #FFFCFA;
+--color-theme2-opt1-input: #EAE3E3;
+--color-theme2-opt1-font: #000000;
+--color-theme2-opt1-footer-bcg: #F6F6F6;
+--color-theme2-opt1-reply-font: #646464;
+--color-theme2-opt1-reply-date-font: #929292;
+
+--color-theme2-opt2-theme: #E1F3CE;
+--color-theme2-opt2-invitation-bcg: #F8F9F6;
+--color-theme2-opt2-border: #D0E6B6;
+--color-theme2-opt2-soft-font: #718D55;
+--color-theme2-opt2-bcg: #FFFCFA;
+--color-theme2-opt2-input: #EAE3E3;
+--color-theme2-opt2-font: #000000;
+--color-theme2-opt2-footer-bcg: #F6F6F6;
+--color-theme2-opt2-reply-font: #646464;
+--color-theme2-opt2-reply-date-font: #929292;
+
+--color-theme2-opt3-theme: #E0EAF5;
+--color-theme2-opt3-invitation-bcg: #F6F7F7;
+--color-theme2-opt3-border: #B7C8E6;
+--color-theme2-opt3-soft-font: #55608D;
+--color-theme2-opt3-bcg: #FFFCFA;
+--color-theme2-opt3-input: #EAE3E3;
+--color-theme2-opt3-font: #000000;
+--color-theme2-opt3-footer-bcg: #F6F6F6;
+--color-theme2-opt3-reply-font: #646464;
+--color-theme2-opt3-reply-date-font: #929292;
+
+/* 테마3 색상셋 */
+--color-theme3-bcg: #F5ECE7;
+--color-theme3-theme: #EBDAD1;
+--color-theme3-invitation-bcg: #F1E5DF;
+--color-theme3-border: #E1BAAF;
+--color-theme3-input: #EAE3E3;
+--color-theme3-input-sample-font: #494949;
+--color-theme3-font: #000000;
+--color-theme3-soft-font: #854F40;
+--color-theme3-footer-bcg: #BB9E90;
+--color-theme3-reply-font: #646464;
+--color-theme3-reply-date-font: #929292;
+  }
+
+.testColor {
+  color: var(--color-main-delete-font)
+}
+
+/* 폰트 */
+@font-face {
+  font-family: "GowunBatang-Regular";
+  src: url("./fonts/GowunBatang-Regular.ttf")
+}
+
+@font-face {
+  font-family: "GowunBatang-Bold";
+  src: url("./fonts/GowunBatang-Bold.ttf")
+}
+
+@font-face {
+  font-family: "GowunDodum";
+  src: url("./fonts/GowunDodum-Regular.ttf")
+}
+
+* {
+  font-family: "GowunDodum";
+}
+
+/* .App {
+  text-align: center;
+}
+
+.collor {
+  color: var(--color-main-bottom-bcg)
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

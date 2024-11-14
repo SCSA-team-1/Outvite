@@ -1,0 +1,32 @@
+/* CommonPhotoUploader.css */
+.uploader-container {
+  width: var(--uploader-size, 80px);
+  height: var(--uploader-size, 80px);
+  border-radius: var(--uploader-radius, 4px);
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.uploader-container:hover .uploader-image {
+  opacity: 80%;
+}
+
+.uploader-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.uploader-icon {
+  font-size: var(--icon-size, 24px);
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
