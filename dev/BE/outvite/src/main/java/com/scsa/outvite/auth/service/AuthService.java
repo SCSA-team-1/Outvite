@@ -1,6 +1,7 @@
 package com.scsa.outvite.auth.service;
 
 import com.scsa.outvite.auth.dto.LoginResponse;
+import com.scsa.outvite.auth.dto.CheckDuplicatedIdResponse;
 import com.scsa.outvite.auth.dto.SignupRequest;
 import com.scsa.outvite.auth.dto.SignupResponse;
 import com.scsa.outvite.entity.Member;
@@ -41,5 +42,11 @@ public class AuthService {
         memberRepository.save(newMember);
 
         return new SignupResponse(newMember);
+    }
+
+    public CheckDuplicatedIdResponse checkDuplicatedId(String id) {
+        boolean isDuplicated = memberRepository.existsById(id);
+
+        return new CheckDuplicatedIdResponse(isDuplicated);
     }
 }
