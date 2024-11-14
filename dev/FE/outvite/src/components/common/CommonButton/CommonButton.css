@@ -1,0 +1,21 @@
+.common-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .common-button .button-icon {
+    display: flex;
+    margin-left: 0.5em;
+
+  }
+  
+  .common-button .button-title {
+    font-weight: bold;
+  }
+  
