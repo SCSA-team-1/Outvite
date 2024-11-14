@@ -22,7 +22,7 @@ public class LoginController {
         LoginResponse response = authService.login(request.getId(), request.getPassword());
         session.setAttribute(LOGINED_ID, request.getId());
         return ApiResponse.builder()
-                .message("로그인에 성공했습니다.")
+                .message("로그인 되었습니다.")
                 .data(response)
                 .build();
     }
