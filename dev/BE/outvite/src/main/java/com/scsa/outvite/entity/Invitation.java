@@ -1,20 +1,17 @@
 package com.scsa.outvite.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
-@Table(name = "guest")
+@Table(name = "invitation")
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 public class Invitation {
     @Id
     @Column(name = "id", nullable = false)
@@ -134,7 +131,7 @@ public class Invitation {
     @Column(name = "groom_mother_account")
     private String groomMotherAccount;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "invitation_id")
     private List<Guestbook> guestbooks;
 
