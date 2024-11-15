@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import static com.scsa.outvite.global.ApiConstants.GUESTBOOK_ALLOWING_ONLY_GUEST;
-import static com.scsa.outvite.guestbook.error.GuestBookError.CREATE_GUESTBOOK_FORBIDDEN;
+import static com.scsa.outvite.guestbook.error.GuestBookError.*;
 import static com.scsa.outvite.invitation.error.InvitationError.NOT_FOUND_INVITATION;
 
 @Service
@@ -35,5 +35,15 @@ public class GuestbookService {
 
         Guestbook guestbook = request.toEntity(invitationId);
         guestbookRepository.save(guestbook);
+    }
+
+    @Transactional
+    public void deleteGuestbook(String invitationId, int guestbookId, int password) {
+        if (!invitationRepository.existsById(invitationId)) throw new BusinessException(NOT_FOUND_INVITATION);
+        Guestbook guestbook = guestbookRepository.findById(guestbookId)
+                .orElseThrow(() -> new BusinessException(NOT_FOUND_GUESTBOOK));
+        if (guestbook.getPassword() != password) throw new AuthException(WRONG_PASSWORD);
+
+        guestbookRepository.delete(guestbook);
     }
 }

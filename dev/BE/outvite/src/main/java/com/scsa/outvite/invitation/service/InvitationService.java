@@ -1,8 +1,10 @@
 package com.scsa.outvite.invitation.service;
 
+import com.scsa.outvite.entity.Guestbook;
 import com.scsa.outvite.entity.Invitation;
 import com.scsa.outvite.global.exception.AuthException;
 import com.scsa.outvite.global.exception.BusinessException;
+import com.scsa.outvite.guestbook.dto.GuestbookDTO;
 import com.scsa.outvite.invitation.dto.CreateInvitationRequest;
 import com.scsa.outvite.invitation.dto.CreateInvitationResponse;
 import com.scsa.outvite.invitation.dto.GetInvitationResponse;
@@ -11,6 +13,9 @@ import com.scsa.outvite.repository.MemberRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.scsa.outvite.auth.error.AuthError.FORBIDDEN;
 import static com.scsa.outvite.invitation.error.InvitationError.NOT_FOUND_INVITATION;
@@ -38,6 +43,11 @@ public class InvitationService {
         Invitation invitation = invitationRepository.findById(invitationId)
                 .orElseThrow(() -> new BusinessException(NOT_FOUND_INVITATION));
 
-        return new GetInvitationResponse(invitation);
+        List<GuestbookDTO> guestbookDTOs = new ArrayList<>();
+        for (Guestbook guestbook : invitation.getGuestbooks()) {
+            guestbookDTOs.add(new GuestbookDTO(guestbook));
+        }
+        GetInvitationResponse response = new GetInvitationResponse(invitation, guestbookDTOs);
+        return response;
     }
 }

@@ -1,56 +1,58 @@
 package com.scsa.outvite.invitation.dto;
 
 import com.scsa.outvite.entity.Invitation;
-import lombok.*;
+import com.scsa.outvite.guestbook.dto.GuestbookDTO;
+import lombok.Getter;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 public class GetInvitationResponse {
-    private String id;
-    private LocalDate date;
-    private String venue;
-    private String introductionWriting;
-    private String closingWriting;
-    private String guestbookAuthorization;
-    private int themeNumber;
-    private String detailedColor;
-    private String detailedFont;
-    private String brideName;
-    private String bridePhone;
-    private String brideBank;
-    private String brideDepositor;
-    private String brideAccount;
-    private String groomName;
-    private String groomPhone;
-    private String groomBank;
-    private String groomDepositor;
-    private String groomAccount;
-    private String brideFatherName;
-    private String brideFatherPhone;
-    private String brideFatherBank;
-    private String brideFatherDepositor;
-    private String brideFatherAccount;
-    private String brideMotherName;
-    private String brideMotherPhone;
-    private String brideMotherBank;
-    private String brideMotherDepositor;
-    private String brideMotherAccount;
-    private String groomFatherName;
-    private String groomFatherPhone;
-    private String groomFatherBank;
-    private String groomFatherDepositor;
-    private String groomFatherAccount;
-    private String groomMotherName;
-    private String groomMotherPhone;
-    private String groomMotherBank;
-    private String groomMotherDepositor;
-    private String groomMotherAccount;
-    // TODO: 이미지 리스트와 방명록 리스트 구현 필요
+    private final String id;
+    private final LocalDate date;
+    private final String venue;
+    private final String introductionWriting;
+    private final String closingWriting;
+    private final String guestbookAuthorization;
+    private final int themeNumber;
+    private final String detailedColor;
+    private final String detailedFont;
+    private final String brideName;
+    private final String bridePhone;
+    private final String brideBank;
+    private final String brideDepositor;
+    private final String brideAccount;
+    private final String groomName;
+    private final String groomPhone;
+    private final String groomBank;
+    private final String groomDepositor;
+    private final String groomAccount;
+    private final String brideFatherName;
+    private final String brideFatherPhone;
+    private final String brideFatherBank;
+    private final String brideFatherDepositor;
+    private final String brideFatherAccount;
+    private final String brideMotherName;
+    private final String brideMotherPhone;
+    private final String brideMotherBank;
+    private final String brideMotherDepositor;
+    private final String brideMotherAccount;
+    private final String groomFatherName;
+    private final String groomFatherPhone;
+    private final String groomFatherBank;
+    private final String groomFatherDepositor;
+    private final String groomFatherAccount;
+    private final String groomMotherName;
+    private final String groomMotherPhone;
+    private final String groomMotherBank;
+    private final String groomMotherDepositor;
+    private final String groomMotherAccount;
+    // TODO: 이미지 리스트 구현 필요
 //    private List<InvitationImage> images;
-//    private List<Guestbook> guestbookList;
+    private List<GuestbookDTO> guestbookList;
 
-    public GetInvitationResponse(Invitation invitation) {
+    public GetInvitationResponse(Invitation invitation, List<GuestbookDTO> guestbookList) {
         this.id = invitation.getId();
         this.date = invitation.getDate();
         this.venue = invitation.getVenue();
@@ -90,5 +92,6 @@ public class GetInvitationResponse {
         this.groomMotherBank = invitation.getGroomMotherBank();
         this.groomMotherDepositor = invitation.getGroomMotherDepositor();
         this.groomMotherAccount = invitation.getGroomMotherAccount();
+        this.guestbookList = guestbookList;
     }
 }
