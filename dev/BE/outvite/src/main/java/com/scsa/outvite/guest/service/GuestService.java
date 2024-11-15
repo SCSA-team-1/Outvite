@@ -67,7 +67,6 @@ public class GuestService {
             throw new AuthException(FORBIDDEN);
         }
 
-
         GuestEmbedded embeddedId = GuestEmbedded.builder()
                 .invitationId(invitationId)
                 .phone(phone)

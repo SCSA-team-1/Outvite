@@ -29,10 +29,11 @@ public class GuestController {
     }
 
     @GetMapping
-    public ApiResponse readGuests(@SessionAttribute(name = MEMBER_ID, required = false) String memberId, @PathVariable("invitationId") String invitationId
+    public ApiResponse readGuests(@SessionAttribute(name = MEMBER_ID, required = false) String memberId,
+                                  @PathVariable("invitationId") String invitationId
     ) {
-
         GetGuestResponse response = guestService.readGuest(memberId, invitationId);
+
         return ApiResponse.builder()
                 .message("참석자 명단을 조회했습니다.")
                 .data(response)
@@ -42,7 +43,7 @@ public class GuestController {
     @DeleteMapping("/{phone}")
     public ApiResponse deleteGuest(@SessionAttribute(name = MEMBER_ID, required = false) String memberId,
                                    @PathVariable("invitationId") String invitationId,
-                                 @PathVariable("phone") String phone
+                                   @PathVariable("phone") String phone
     ) {
         guestService.deleteGuest(memberId, invitationId, phone);
 
