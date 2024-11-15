@@ -28,7 +28,7 @@ pipeline {
             steps {
                 dir('dev/BE/outvite') {
                     script {
-                        sh 'source /etc/profile.d/gradle.sh'
+                        sh '. /etc/profile.d/gradle.sh'
                         sh 'gradle wrapper'
                     }
                 }
