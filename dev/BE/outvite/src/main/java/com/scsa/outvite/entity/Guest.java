@@ -4,17 +4,14 @@ import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "guest")
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 public class Guest {
 
     @EmbeddedId
@@ -24,7 +21,7 @@ public class Guest {
     private String name;
 
     @Column(name = "password", nullable = false)
-    private String password;
+    private int password;
 
     @Column(name = "groom_bride_side")
     private String groomBridgeSide;
