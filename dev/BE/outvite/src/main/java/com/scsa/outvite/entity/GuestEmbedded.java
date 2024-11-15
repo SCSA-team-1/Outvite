@@ -6,12 +6,12 @@ import lombok.*;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode
 @Embeddable
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
+@EqualsAndHashCode
 public class GuestEmbedded implements Serializable {
     @Column(name="phone")
     private String phone;
