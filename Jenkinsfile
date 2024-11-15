@@ -29,7 +29,6 @@ pipeline {
                 dir('dev/BE/outvite') {
                     script {
                         sh 'gradle wrapper'
-                        sh 'rm -rf target'
                     }
                 }
             }
@@ -50,27 +49,5 @@ pipeline {
             }
         }
 
-        stage('Remove Previous SpringBoot Docker') {
-            steps {
-                dir('dev/BE') {
-                    script {
-                        sh 'docker stop be || true'
-                        sh 'docker rm be || true'
-                        sh 'docker rmi ibe || true'
-                    }
-                }
-            }
-        }
-
-        stage('Spring Docker Build and Run') {
-            steps {
-                dir('dev/BE') {
-                    script {
-                        sh 'docker build -t ibe .'
-                        sh 'docker run -p 8081:8081 -d --name be ibe'
-                    }
-                }
-            }
-        }
     }
 }
