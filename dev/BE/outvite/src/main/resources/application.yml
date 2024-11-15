@@ -1,9 +1,9 @@
 spring:
   application.name: outvite
   datasource:
-    url: jdbc:mysql://localhost:3306/outvite
-    username: root
-    password:
+    url: jdbc:mysql://3.35.79.219:3306/outvite
+    username: scsateam1
+    password: gPehdalsrjsehd
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
