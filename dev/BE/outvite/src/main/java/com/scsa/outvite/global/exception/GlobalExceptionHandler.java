@@ -5,6 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.util.Arrays;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     //비즈니스 로직 예외 처리 -> BadRequest의 역할
@@ -28,6 +30,6 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleException(Exception e) {
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), "unhandled exception"));
+                .body(new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), Arrays.stream(e.getStackTrace()).toList().toString()));
     }
 }
