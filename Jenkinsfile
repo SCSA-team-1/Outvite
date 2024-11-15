@@ -28,8 +28,7 @@ pipeline {
             steps {
                 dir('dev/BE/outvite') {
                     script {
-                        sh 'export GRADLE_HOME=/opt/gradle/gradle-8.10.2'
-                        sh 'export PATH=${GRADLE_HOME}/bin:${PATH}'
+                        sh 'source /etc/profile.d/gradle.sh'
                         sh 'gradle wrapper'
                     }
                 }
