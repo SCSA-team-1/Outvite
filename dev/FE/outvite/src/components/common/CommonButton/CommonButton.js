@@ -8,7 +8,10 @@ const CommonButton = ({
   buttonTextColor,
   buttonWidth,
   buttonHeight,
-  buttonRadius = "m"
+  fontWeight = "regular",
+  buttonRadius = "m",
+  buttonFunction,
+  fontSize
 }) => {
   const buttonStyles = {
     backgroundColor,
@@ -16,6 +19,8 @@ const CommonButton = ({
     width: buttonWidth,
     height: buttonHeight,
     borderRadius: getBorderRadius(buttonRadius),
+    fontSize:fontSize,
+    fontWeight:fontWeight
   };
 
   function getBorderRadius(radius) {
@@ -36,8 +41,8 @@ const CommonButton = ({
   }
 
   return (
-    <button className="common-button" style={buttonStyles}>
-      <span className="button-title">{buttonTitle}</span>
+    <button className="common-button" style={buttonStyles} onClick={buttonFunction}>
+      <div className="button-title">{buttonTitle}</div>
       {buttonIcon && <span className="button-icon">{buttonIcon}</span>}
     </button>
   );

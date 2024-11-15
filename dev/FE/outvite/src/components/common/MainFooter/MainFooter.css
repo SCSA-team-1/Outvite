@@ -1,0 +1,23 @@
+/** @format */
+.container2 {
+    width:100%;
+    height:70px;
+    display: flex;
+    background-color: var(--color-main-theme);
+    align-items: center;
+    justify-content: center;
+}
+.logoBox {
+    width:75px;
+    height:75px;
+    margin-right:30px;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid red; */
+  background-image: url("../../../assets/main/OUTVITE_logo1.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
