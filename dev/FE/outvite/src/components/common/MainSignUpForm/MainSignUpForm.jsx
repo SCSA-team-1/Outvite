@@ -30,7 +30,7 @@ const MainSignUpForm = () => {
       return "아이디는 4~12자의 영문 대소문자와 숫자만 가능합니다.";
     }
     setIsIdValid(true);
-    return "가능한 아이디입니다.";
+    return "";
   };
 
   // PW 유효성 검사 함수
@@ -44,7 +44,7 @@ const MainSignUpForm = () => {
       return "6자 이상으로, 영문자와 숫자를 포함해야 합니다.";
     }
     setIsPasswordValid(true);
-    return "가능한 비밀번호입니다.";
+    return "";
   };
 
   // 전화번호 유효성 검사 함수
@@ -101,14 +101,17 @@ const MainSignUpForm = () => {
         id, password, name, phone
       });
       if (response.data.status === 200) {
-        setResponseMessage("회원가입에 성공했습니다.");
+        alert("로그인창으로 넘어가게 해라");
+      }
+      if (response.data.status === 409) {
+        setIdError("이미 존재하는 ID 입니다.")
+        setId("");
       }
     } catch (error) {
-      setResponseMessage("회원가입에 실패했습니다. 다시 시도해 주세요.");
       if (error.response) {
         alert("회원가입에 실패했습니다.");
       } else {
-        alert("서버에 문제가 발생했습니다. 잠시 후 다시 시도해주세요.");
+        alert("서버에 문제가 발생했습니다. 관리자에게 문의 바랍니다.");
       }
     }
   };
