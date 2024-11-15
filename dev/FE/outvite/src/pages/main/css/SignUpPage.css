@@ -1,0 +1,151 @@
+#main {
+    width: 80%;
+    height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-main-bcg);
+  }
+.body {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #preview-section {
+    width:50%;
+    background-color: red;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+#create-section {
+    width:50%;
+    background-color: yellow;
+
+}
+
+.preview-phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : 90%;
+    background-color: aqua;
+    height : 800px;
+}
+
+.create-container {
+    width: 80%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-container {
+    width: 100%;
+    padding:5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 15px 10px;
+    border-bottom: 1px solid black;
+}
+
+.info-bride-side {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.sub-title {
+    padding: 3px;
+    width: 8rem;
+    background-color: aquamarine;
+    margin-bottom: 13px;
+}
+
+.info-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    background-color: rgb(236, 236, 217);
+}
+
+.info-input-sub-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    background-color: rgb(203, 191, 214);
+    padding: 15px 10px;
+    border-radius: 8px;
+}
+
+
+.info-input-box {
+    background-color:rgb(236, 219, 195);
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    width: 115px;
+}
+
+.input-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bank-select {
+    width:55px;
+}
+
+.sub-input-box {
+    display: flex;
+    gap: 5px;
+}
+
+.plus-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.plus-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-main-softer-font);
+    color: var(--color-main-softer-font);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.plus-text {
+    color: var(--color-main-softer-font);
+    font-size: 13px;
+    text-wrap: nowrap;
+    align-self: center;
+    justify-self: center;
+
+} */
