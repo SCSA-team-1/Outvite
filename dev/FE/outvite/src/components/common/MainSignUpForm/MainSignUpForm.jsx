@@ -109,7 +109,7 @@ const MainSignUpForm = () => {
       }
     } catch (error) {
       if (error.response) {
-        alert("회원가입에 실패했습니다.");
+        setIdError("이미 존재하는 ID 입니다.")
       } else {
         alert("서버에 문제가 발생했습니다. 관리자에게 문의 바랍니다.");
       }
